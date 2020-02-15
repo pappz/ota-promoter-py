@@ -129,7 +129,7 @@ class OTAPromoter(object):
 
     def __download_by_hash(self, checksum, dst_path):
         print("download: {}".format(dst_path))
-        path = "/file/"+checksum
+        path = "/files/"+checksum
         with open(dst_path, 'w') as dst:
             try:
                 response = requests.get(self.__get_url(path))
